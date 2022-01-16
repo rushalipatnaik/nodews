@@ -1,0 +1,11 @@
+{
+  "name": "myhttpserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "my first server",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rushali",
+  "license": "ISC"
+}
