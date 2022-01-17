@@ -3,7 +3,6 @@ const port = 8000;
 const fs = require('fs');
 
 function requestHandler(req, res){
-  // console.log(req.url);
   res.writeHead(200, {'content-type': 'text/html'});
 
   let filepath;
@@ -22,6 +21,7 @@ function requestHandler(req, res){
   fs.readFile(filepath, function(err,data){
     if(err){
       return console.log("err:", err);
+      return res.end('<h1>Error!</h1>');
     }
     return res.end(data);
   })
@@ -37,5 +37,5 @@ server.listen(port,function(err){
     return;
    }
 
-   console.log("Server is up and running on port: ", port);
+   console.log("Server is running on port: ", port);
  });
